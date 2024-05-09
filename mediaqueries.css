@@ -10,6 +10,7 @@
   .about-details-container {
     margin-top: 2rem;
     margin-right: 40px;
+    left: 70px;
   }
   #contact,
   #projects {
@@ -112,11 +113,14 @@
 
   .about-details-container {
     flex-direction: column;
+    margin-right: 40px;
   }
 
   .about-containers,
   .text-container {
     width: 100%; /* Make containers full width */
+    position: relative;
+    right: 30px;
   }
 
   /* Experience Section */
@@ -158,5 +162,11 @@
 
   .contact-info-container {
     margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 500px){
+  .about-details-container{
+    position: relative;
+    right: 60px;
   }
 }
