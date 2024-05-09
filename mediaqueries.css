@@ -108,3 +108,96 @@
     text-align: justify;
   }
 }
+/* Add this to your existing mediaqueries.css file or create a new one */
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  nav {
+    display: none; /* Hide desktop navigation */
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: block; /* Show hamburger navigation */
+  }
+
+  .hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .menu-links {
+    display: none; /* Initially hide menu links */
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .menu-links li {
+    list-style-type: none;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .menu-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .hamburger-icon {
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .hamburger-icon.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Adjustments for profile section */
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    margin-bottom: 20px;
+  }
+
+  .section__text {
+    padding: 0 10px;
+  }
+
+  /* Adjustments for other sections as needed */
+}
