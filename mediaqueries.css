@@ -64,8 +64,22 @@
 
   .logo {
     font-size: 1.5rem; /* Decrease logo size */
+    position: relative;
+    right: 60px;
   }
-
+  .section-container{
+    position: relative;
+    right: 20px;
+    bottom: 60px;
+  }
+  .experience-details-container{
+    position: relative;
+    bottom: 100px;
+    left: 30px;;
+  }
+  .nav-links-container{
+    gap: none;
+  }
   /* Navigation */
   nav {
     flex-direction: column;
@@ -105,6 +119,11 @@
   #socials-container {
     margin-top: 20px;
   }
+  .hamburger-icon{
+    position: relative;
+    left: 150px;
+    bottom: 70px;
+  }
 
   /* About Section */
   #about {
@@ -131,9 +150,17 @@
   .experience-details-container {
     flex-direction: column;
   }
+  .section__text__p1{
+    position: relative;
+    bottom: 100px;
+  }
 
   .details-container {
     margin-bottom: 20px;
+  }
+  .title{
+    position: relative;
+    bottom: 80px;
   }
   
 
@@ -163,7 +190,11 @@
   .contact-info-container {
     margin: 10px 0;
   }
+  .hamburger-icon{
+    
+  }
 }
+
 @media only screen and (max-width: 500px){
   .about-details-container{
     position: relative;
