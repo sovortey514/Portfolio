@@ -9,6 +9,7 @@
   }
   .about-details-container {
     margin-top: 2rem;
+    margin-right: 40px;
   }
   #contact,
   #projects {
@@ -130,10 +131,7 @@
   .details-container {
     margin-bottom: 20px;
   }
-  .about-pic{
-    position: relative;
-   right: 23px;
-  }
+  
 
   /* Projects Section */
   #projects {
