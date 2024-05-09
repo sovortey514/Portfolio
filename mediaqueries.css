@@ -6,11 +6,14 @@
   .about-containers {
     flex-wrap: wrap;
     
+    
+    
   }
   .about-details-container {
     margin-top: 2rem;
     margin-right: 40px;
-    left: 70px;
+    position: relative;
+
   }
   #contact,
   #projects {
