@@ -4,16 +4,17 @@
     margin-bottom: 4rem;
   }
   .about-containers {
+    display: flex;
     flex-wrap: wrap;
-    
-    
+    position: relative;
+    justify-content: center;
     
   }
   .about-details-container {
     margin-top: 2rem;
     margin-right: 40px;
     position: relative;
-
+  
   }
   #contact,
   #projects {
@@ -53,7 +54,8 @@
     margin: 0 auto 2rem;
   }
   .about-containers {
-    margin-top: 30px;
+   position: relative;
+   left: 200px;
   }
 }
 

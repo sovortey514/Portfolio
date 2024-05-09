@@ -39,6 +39,7 @@ nav {
   height: 17vh;
 }
 
+
 .nav-links {
   gap: 2rem;
   list-style: none;
@@ -117,6 +118,10 @@ a:hover {
 
 .menu-links li {
   list-style: none;
+}
+.text-container{
+  position: relative;
+  left: 30px;
 }
 
 .menu-links.open {
@@ -273,6 +278,11 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+
+  position: relative;
+
+ 
+
 }
 
 .about-details-container {
@@ -280,13 +290,16 @@ section {
   flex-direction: column;
   position: relative;
   bottom: 3rem;
-  right: 100px;
+
   
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
+  position: relative;
+  justify-content: center;
+  
 }
 
 .about-pic {
@@ -308,6 +321,7 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
+
 
 .section-container {
   gap: 6rem;
@@ -437,3 +451,4 @@ footer {
 footer p {
   text-align: center;
 }
+
