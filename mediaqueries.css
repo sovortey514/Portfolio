@@ -48,67 +48,11 @@
     margin: 0 auto 2rem;
   }
   .about-containers {
-    margin-top: 0;
+    margin-top: 30px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-   
-   
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
-}
-/* Add this to your existing mediaqueries.css file or create a new one */
+/* Add these styles to your existing mediaqueries.css */
 
 /* Mobile Styles */
 @media only screen and (max-width: 600px) {
@@ -116,88 +60,105 @@
     font-size: 14px; /* Adjust font size for better readability on smaller screens */
   }
 
+  .logo {
+    font-size: 1.5rem; /* Decrease logo size */
+  }
+
+  /* Navigation */
   nav {
-    display: none; /* Hide desktop navigation */
-  }
-
-  #desktop-nav {
-    display: none;
-  }
-
-  #hamburger-nav {
-    display: block; /* Show hamburger navigation */
-  }
-
-  .hamburger-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .menu-links {
-    display: none; /* Initially hide menu links */
     flex-direction: column;
-    background-color: #333;
-    width: 100%;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    padding: 10px 0;
+    align-items: center;
   }
 
-  .menu-links li {
-    list-style-type: none;
-    margin: 5px 0;
-    text-align: center;
+  .nav-links {
+    margin-top: 20px;
   }
 
-  .menu-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
+  .nav-links li {
+    margin: 10px 0;
   }
 
-  .hamburger-icon {
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .hamburger-icon span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  .hamburger-icon.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .hamburger-icon.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-icon.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  /* Adjustments for profile section */
+  /* Profile Section */
   #profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 30px 20px;
   }
 
-  .section__pic-container {
+  .section__text__p1 {
+    font-size: 1.2rem; /* Decrease font size */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%; /* Make buttons full width */
+    margin-bottom: 10px;
+  }
+
+  #socials-container {
+    margin-top: 20px;
+  }
+
+  /* About Section */
+  #about {
+    padding: 30px 20px;
+  }
+
+  .about-details-container {
+    flex-direction: column;
+  }
+
+  .about-containers,
+  .text-container {
+    width: 100%; /* Make containers full width */
+  }
+
+  /* Experience Section */
+  #experience {
+    padding: 30px 20px;
+  }
+
+  .experience-details-container {
+    flex-direction: column;
+  }
+
+  .details-container {
     margin-bottom: 20px;
   }
-
-  .section__text {
-    padding: 0 10px;
+  .about-pic{
+    position: relative;
+   right: 23px;
   }
 
-  /* Adjustments for other sections as needed */
+  /* Projects Section */
+  #projects {
+    padding: 30px 20px;
+  }
+
+  .color-container {
+    padding: 15px;
+  }
+
+  .project-img {
+    margin-bottom: 10px;
+  }
+
+  /* Contact Section */
+  #contact {
+    padding: 30px 20px;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info-container {
+    margin: 10px 0;
+  }
 }
