@@ -1,4 +1,4 @@
-/* GENERAL */
+GENERAL
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -60,14 +60,19 @@ a:hover {
 }
 
 .logo {
-  
   font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 4px; /* Space between letters */
+  text-transform: uppercase;
+  color: rgb(121, 192, 243);
+  cursor: default;
+  transition: all 0.3s ease;
 }
 
-.logo {
+.logo:hover {
+  letter-spacing: 6px; /* Smooth expansion on hover */
   color: rgb(121, 192, 243);
 }
-
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -122,8 +127,10 @@ a:hover {
 .text-container{
   position: relative;
   left: 30px;
-}
+  font-size:large;
 
+  
+}
 .menu-links.open {
   max-height: 300px;
 }
@@ -173,13 +180,105 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  transform: translateY(-70px);
 }
 
 .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
-  margin: auto 0;
+  margin: auto;
+  /* Modern professional border effect */
+  border: 4px solid white;
+  outline: 4px solid rgb(121, 192, 243); /* This creates a double-ring effect */
+  border-radius: 50%;
+  overflow: hidden; /* Ensures the image doesn't spill out of the circle */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+/* Container to align text and switch */
+.theme-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 1rem;
+}
+
+.mode-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* The Switch itself */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  z-index: 2; /* Keeps the white circle above icons */
+}
+
+/* Colors and movement */
+input:checked + .slider {
+  background-color: #353535; /* Dark color when active */
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Icons inside the slider */
+.icon-sun { color: #f39c12; font-size: 12px; }
+.icon-moon { color: #f1c40f; font-size: 12px; }
+
+/* Inverting icons if you are using PNGs, but FontAwesome is better */
+[data-theme="dark"] .mode-text { color: white; }
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This is crucial: it prevents the image from stretching */
+  border-radius: 50%;
+}
+
+/* Responsive adjustment for mobile */
+@media screen and (max-width: 600px) {
+  .section__pic-container {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .section__text {
@@ -193,6 +292,10 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  font-size: 1.25rem; /* Equivalent to 20px */
+  font-weight: 500;    /* Medium weight for better readability */
+  color: var(--text-secondary); /* Uses your dark mode variable */
+  margin-bottom: 0.5rem;
 }
 
 .section__text__p2 {
@@ -272,17 +375,14 @@ section {
 
 #about {
   position: relative;
+  transform: translateY(-100px);
 }
 
 .about-containers {
   gap: 2rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   margin-top: 2rem;
-
   position: relative;
-
- 
-
 }
 
 .about-details-container {
@@ -338,6 +438,7 @@ section {
 
 #experience {
   position: relative;
+  transform: translateY(-200px);
 }
 
 .experience-sub-title {
@@ -378,6 +479,7 @@ article .icon {
 
 #projects {
   position: relative;
+  transform: translateY(-250px);
 }
 
 .color-container {
@@ -409,6 +511,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  transform: translateY(-350px);
 }
 
 .contact-info-upper-container {  display: flex;
@@ -446,9 +549,68 @@ article .icon {
 footer {
   height: 26vh;
   margin: 0 1rem;
+  transform: translateY(-500px);
 }
 
 footer p {
   text-align: center;
+}
+
+/* --- DARK MODE VARIABLES --- */
+:root {
+  --bg-color: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: rgb(85, 85, 85);
+  --container-bg: #ffffff;
+  --border-color: rgb(163, 163, 163);
+  --project-bg: rgb(250, 250, 250);
+  --btn-bg: rgb(53, 53, 53);
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --container-bg: #1e1e1e;
+  --border-color: #444444;
+  --project-bg: #252525;
+  --btn-bg: #333333;
+}
+
+/* --- UPDATED GENERAL STYLES --- */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color); /* Applied Variable */
+  color: var(--text-primary);        /* Applied Variable */
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+p { color: var(--text-secondary); }
+
+a { color: var(--text-primary); }
+
+.details-container {
+  background: var(--container-bg);
+  border: var(--border-color) 0.1rem solid;
+}
+
+.color-container {
+  background: var(--project-bg);
+  border-color: var(--border-color);
+}
+
+.menu-links {
+  background-color: var(--container-bg); /* Dark menu for mobile */
+}
+
+.menu-links a { color: var(--text-primary); }
+
+.hamburger-icon span { background-color: var(--text-primary); }
+
+.project-title { color: var(--text-primary); }
+
+/* Update icon colors for dark mode if they are black PNGs */
+[data-theme="dark"] .icon {
+  filter: invert(1); /* This turns black icons into white icons */
 }
 

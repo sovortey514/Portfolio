@@ -1,208 +1,123 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 4rem;
-  }
-  .about-containers {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    
-  }
-  .about-details-container {
-    margin-top: 2rem;
-    margin-right: 40px;
-    position: relative;
-  
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
- 
-}
-
+/* --- TABLETS & LARGE PHONES (max-width: 1200px) --- */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
+
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 3rem;
+
+  section {
+    margin: 0 5%;
+    height: auto; /* Let content dictate height */
+    min-height: fit-content;
+    padding-bottom: 5rem;
   }
-  #profile,
-  .section-container {
-    display: block;
+
+  .section-container,
+  #profile {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    gap: 2rem;
   }
+
+  .section__pic-container {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
+    gap: 1rem;
+    left: 0; /* Resetting the offset from your previous code */
+  }
+
+  .about-details-container {
+    margin-right: 0;
+    width: 100%;
+  }
+
   .arrow {
     display: none;
   }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-   position: relative;
-   left: 200px;
-  }
 }
 
-/* Add these styles to your existing mediaqueries.css */
-
-/* Mobile Styles */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 14px; /* Adjust font size for better readability on smaller screens */
-  }
-
-  .logo {
-    font-size: 1.5rem; /* Decrease logo size */
-    position: relative;
-    right: 60px;
-  }
-  .section-container{
-    position: relative;
-    right: 20px;
-    bottom: 60px;
-  }
-  .experience-details-container{
-    position: relative;
-    bottom: 100px;
-    left: 30px;;
-  }
-  .nav-links-container{
-    gap: none;
-  }
-  /* Navigation */
-  nav {
+/* --- SMALL TABLETS & MOBILE (max-width: 800px) --- */
+@media screen and (max-width: 800px) {
+  .about-containers {
     flex-direction: column;
     align-items: center;
   }
 
-  .nav-links {
-    margin-top: 20px;
+  .details-container {
+    width: 90%;
   }
 
-  .nav-links li {
-    margin: 10px 0;
+  #experience .about-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
+}
 
-  /* Profile Section */
-  #profile {
-    padding: 30px 20px;
-  }
-
-  .section__text__p1 {
-    font-size: 1.2rem; /* Decrease font size */
+/* --- SMARTPHONES (max-width: 600px) --- */
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 1.25rem;
   }
 
   .title {
     font-size: 2rem;
   }
 
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
   .btn-container {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .btn {
-    width: 100%; /* Make buttons full width */
-    margin-bottom: 10px;
-  }
-
-  #socials-container {
-    margin-top: 20px;
-  }
-  .hamburger-icon{
-    position: relative;
-    left: 150px;
-    bottom: 70px;
-  }
-
-  /* About Section */
-  #about {
-    padding: 30px 20px;
-  }
-
-  .about-details-container {
-    flex-direction: column;
-    margin-right: 40px;
-  }
-
-  .about-containers,
-  .text-container {
-    width: 100%; /* Make containers full width */
-    position: relative;
-    right: 30px;
-  }
-
-  /* Experience Section */
-  #experience {
-    padding: 30px 20px;
-  }
-
-  .experience-details-container {
-    flex-direction: column;
-  }
-  .section__text__p1{
-    position: relative;
-    bottom: 100px;
-  }
-
-  .details-container {
-    margin-bottom: 20px;
-  }
-  .title{
-    position: relative;
-    bottom: 80px;
-  }
-  
-
-  /* Projects Section */
-  #projects {
-    padding: 30px 20px;
-  }
-
-  .color-container {
-    padding: 15px;
-  }
-
-  .project-img {
-    margin-bottom: 10px;
-  }
-
-  /* Contact Section */
-  #contact {
-    padding: 30px 20px;
+    width: 100%; /* Full width buttons for easier tapping */
+    max-width: 300px;
   }
 
   .contact-info-upper-container {
     flex-direction: column;
-    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
   }
 
-  .contact-info-container {
-    margin: 10px 0;
+  .contact-info-container p {
+    font-size: 1rem;
   }
-  .hamburger-icon{
-    
-  }
-}
 
-@media only screen and (max-width: 500px){
-  .about-details-container{
-    position: relative;
-    right: 60px;
+  /* Fix for Hamburger alignment */
+  #hamburger-nav {
+    padding: 0 20px;
+  }
+
+  .menu-links a {
+    font-size: 1.25rem;
+  }
+
+  footer nav {
+    display: none; /* Hide footer links on small mobile to save space */
+  }
+  
+  /* Resetting all the manual 'left' and 'right' positions */
+  .text-container, 
+  .about-details-container, 
+  .section-container,
+  .experience-details-container {
+    left: 0 !important;
+    right: 0 !important;
+    position: static; 
+    text-align: center;
   }
 }
