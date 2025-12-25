@@ -29,6 +29,36 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
+function createSnow() {
+  const container = document.getElementById('snow-container');
+  if (!container) return;
+
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+
+  // Randomize the snow appearance
+  const size = Math.random() * 6 + 2 + 'px'; // Size between 2px and 8px
+  const left = Math.random() * 100 + '%';    // Random start position
+  const duration = Math.random() * 3 + 4 + 's'; // Speed between 4s and 7s
+  const opacity = Math.random() * 0.5 + 0.3;  // Random transparency
+
+  snowflake.style.width = size;
+  snowflake.style.height = size;
+  snowflake.style.left = left;
+  snowflake.style.animationDuration = duration;
+  snowflake.style.opacity = opacity;
+
+  container.appendChild(snowflake);
+
+  // Remove the snowflake after it finishes falling to save memory
+  setTimeout(() => {
+    snowflake.remove();
+  }, 7000);
+}
+
+// Create a new snowflake every 150ms
+setInterval(createSnow, 150);
+
 
 // 2. TYPEWRITER EFFECT LOGIC
 var TxtRotate = function(el, toRotate, period) {
